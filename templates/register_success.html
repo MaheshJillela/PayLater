@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PayLater Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #1a1a1a;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #444;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            color: #f4a261;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 5px 15px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #f4a261;
+            color: #000;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1e1e1e, #444);
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: #e76f51;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #bbb;
+        }
+
+        .hero .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            background: #f4a261;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .hero .btn:hover {
+            background: #e76f51;
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            display: grid;
+            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .card {
+            background: #1a1a1a;
+            border: 2px solid #444;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .card:hover {
+            background: #333;
+            border-color: #f4a261;
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #e76f51;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #bbb;
+        }
+
+        .card .btn {
+            margin-top: 15px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: #f4a261;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .card .btn:hover {
+            background: #e76f51;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #1a1a1a;
+            border-top: 2px solid #444;
+            margin-top: 50px;
+        }
+
+        footer p {
+            color: #888;
+            font-size: 1rem;
+        }
+
+        /* Success message styling */
+        .success-message {
+            background: #28a745;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin: 30px auto;
+            width: 80%;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .success-message a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 15px;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            background: #f4a261;
+            transition: background 0.3s;
+        }
+
+        .success-message a:hover {
+            background: #e76f51;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PayLater</h1>
+        <nav>
+            <a href="#users">For Users</a>
+            <a href="#merchants">For Merchants</a>
+            <a href="user_login.html">User Login</a>
+            <a href="merchant_login.html">Merchant Login</a>
+            <a href="user_register.html">User Register</a>
+            <a href="merchant_register.html">Merchant Register</a>
+        </nav>
+    </header>
+
+   
+
+    <div class="container" id="learn-more">
+        <!-- Success Message Section -->
+        <div class="success-message">
+            <h3>Success!</h3>
+            <p>You have successfully registered as a user. Welcome to PayLater!</p>
+            <a href="/userlogin">Login Now</a>
+        </div>
+
+        
+    </div>
+
+    <footer>
+        <p>&copy; 2024 PayLater. All rights reserved.</p>
+    </footer>
+</body>
+</html>

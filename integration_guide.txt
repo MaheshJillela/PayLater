@@ -1,0 +1,50 @@
+
+# API Documentation for Integration
+
+## Base URL
+`http://<your-domain>`
+
+### 1. User Validation
+**Endpoint**: `/api/validate_user`  
+**Method**: POST  
+**Payload**:
+```json
+{
+    "user_id": 1,
+    "amount": 500
+}
+```
+**Response**:
+- `200 OK`: `{"valid": true}`  
+- `400 Bad Request`: `{"valid": false}`
+
+### 2. Initiate Transaction
+**Endpoint**: `/transaction`  
+**Method**: POST  
+**Payload**:
+```json
+{
+    "user_id": 1,
+    "platform_id": 1,
+    "amount": 1000
+}
+```
+**Response**:
+- `201 Created`: `{"transaction_id": 123}`  
+- `404 Not Found`: `{"error": "Invalid user or platform"}`
+
+### 3. Check Transaction Status
+**Endpoint**: `/transaction_status?transaction_id=<id>`  
+**Method**: GET  
+**Response**:
+```json
+{
+    "status": "Pending",
+    "amount": 1000
+}
+```
+
+### Integration Steps
+1. Obtain an API key upon registration.
+2. Use the `/api/validate_user` endpoint before processing any transaction.
+3. Use the `/transaction` endpoint to create transactions for users.
